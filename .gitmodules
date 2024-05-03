@@ -1,3 +1,3 @@
 [submodule "private-billings"]
-	path = private-billings
+	path = deps/private-billings
 	url = git@github.com:3MI-Labs/private-billings.git
