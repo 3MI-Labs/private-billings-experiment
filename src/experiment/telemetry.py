@@ -1,8 +1,11 @@
 from enum import Enum
 import time
+from dataclasses import dataclass
+from typing import Any
 from private_billing import CycleID
-from private_billing.server import Target
-from experiment import TelemetryMessage
+from private_billing.server import Target, MessageType, Message
+from private_billing.core import ClientID
+from .experiment import ExperimentMessageType
 
 
 class TelemetryType(Enum):
@@ -11,6 +14,33 @@ class TelemetryType(Enum):
     COMPUTE_BILL = "compute_bill"
     BOOTSTRAP = "bootstrap"
     AGGREGATE = "aggregate"
+
+
+@dataclass
+class TelemetryMessage(Message):
+    """Message used to send telemetry data to the server."""
+
+    peer_id: ClientID
+    cycle_id: CycleID
+    telemetry_type: TelemetryType
+    value: Any
+
+    @property
+    def type(self) -> MessageType:
+        """Type of this message."""
+        return ExperimentMessageType.TELEMETRY
+
+
+@dataclass
+class GetTelemetryMessage(Message):
+    """Message used to send telemetry data to the server."""
+
+    cycle_id: CycleID
+
+    @property
+    def type(self) -> MessageType:
+        """Type of this message."""
+        return ExperimentMessageType.GET_TELEMETRY
 
 
 class TelemetryDataStore:

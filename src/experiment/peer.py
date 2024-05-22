@@ -5,19 +5,21 @@ from private_billing import CycleID, Data, Peer, PeerDataStore
 from private_billing.server import Target, MessageSender
 from private_billing.messages import (
     BillMessage,
+    BootMessage,
     DataMessage,
+    HelloMessage,
     SeedMessage,
     ContextMessage,
+    UserType,
+    WelcomeMessage,
 )
 
 from .experiment import (
     BootStrapMessage,
     ExperimentMessageType,
-    TelemetryMessage,
     speedtest,
 )
-from .telemetry import TelemetryType
-
+from .telemetry import TelemetryType, TelemetryMessage
 
 class ExperimentPeerDataStore(PeerDataStore):
 
@@ -30,7 +32,9 @@ class ExperimentPeer(Peer):
 
     @property
     def data(self):
-        return ExperimentPeerDataStore()
+        if not hasattr(self.server, "data"):
+            self.server.data = ExperimentPeerDataStore()
+        return self.server.data
 
     @property
     def handlers(self):
@@ -38,11 +42,39 @@ class ExperimentPeer(Peer):
             ExperimentMessageType.START_BOOTSTRAP: self.handle_start_bootstrap,
         }
         return {**super().handlers, **new_handlers}
+    
+    def handle_boot(self, msg: BootMessage, sender: Target) -> None:
+        """
+        Perform boot sequence.
+        This entails registering with the market operator.
+        """
+        # Register with the market_operator
+        self.data.market_address = msg.market_address
+        hello_msg = HelloMessage(UserType.CLIENT, self.contact_address)
+        resp: WelcomeMessage = self.send(hello_msg, self.data.market_operator)
+
+        # Store id
+        self.data.id = resp.id
+        self.data.billing_server = resp.billing_server
+
+        # Set up hiding context with info
+        self._init_hiding_context(resp.cycle_length)
+
+        # Locally record fellow peers
+        for peer in resp.peers:
+            self.data.peers[peer.id] = peer
+
+        # Register with billing server
+        if self.data.billing_server:
+            self.register_with_server(self.data.billing_server)
+
+        # Forward message to acknowledge boot success
+        self.reply(resp)
 
     def handle_start_bootstrap(self, msg: BootStrapMessage, sender: Target):
         """Handle signal to start the bootstrapping procedure."""
         # Keep track of when bootstrapping started
-        self.data.bootstrap_start = time.clock()
+        self.data.bootstrap_start = time.process_time()
 
         # Send seeds to all connected peers
         for peer in self.data.peers.values():
@@ -56,7 +88,7 @@ class ExperimentPeer(Peer):
             return
 
         # Send telemetry data
-        bootstrap_end = time.clock()
+        bootstrap_end = time.process_time()
         bootstrap_time = bootstrap_end - self.data.bootstrap_start
         telemetry_msg = TelemetryMessage(
             self.data.id, -1, TelemetryType.BOOTSTRAP, bootstrap_time

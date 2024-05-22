@@ -3,8 +3,8 @@ from private_billing.core import CycleID
 from private_billing.messages import BillMessage
 from private_billing.server import MessageSender
 
-from .experiment import TelemetryMessage, speedtest
-from .telemetry import TelemetryType
+from .experiment import speedtest
+from .telemetry import TelemetryType, TelemetryMessage
 
 
 class ExperimentServer(BillingServer):

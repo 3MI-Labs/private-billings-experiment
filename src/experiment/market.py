@@ -9,10 +9,13 @@ from private_billing.core import CycleID, CycleContext
 from .experiment import (
     BootStrapMessage,
     ExperimentMessageType,
-    GetTelemetryMessage,
-    TelemetryMessage,
 )
-from .telemetry import TelemetryDataStore, TelemetryType
+from .telemetry import (
+    TelemetryDataStore,
+    TelemetryType,
+    TelemetryMessage,
+    GetTelemetryMessage,
+)
 
 
 class ExperimentOperatorDataStore(MarketOperatorDataStore):
@@ -28,7 +31,9 @@ class ExperimentOperator(MarketOperator):
 
     @property
     def data(self) -> ExperimentOperatorDataStore:
-        return ExperimentOperatorDataStore()
+        if not hasattr(self.server, "data"):
+            self.server.data = ExperimentOperatorDataStore()
+        return self.server.data
 
     @property
     def handlers(self):

@@ -2,8 +2,7 @@ from dataclasses import dataclass
 import time
 from typing import Any, Callable, Tuple
 from private_billing.server import Message, MessageType
-from private_billing.core import CycleID, ClientID
-from .telemetry import TelemetryType
+from private_billing.core import CycleID
 
 
 class ExperimentMessageType(MessageType):
@@ -21,32 +20,6 @@ class BootStrapMessage(Message):
         return ExperimentMessageType.START_BOOTSTRAP
 
 
-@dataclass
-class TelemetryMessage(Message):
-    """Message used to send telemetry data to the server."""
-
-    peer_id: ClientID
-    cycle_id: CycleID
-    telemetry_type: TelemetryType
-    value: Any
-
-    @property
-    def type(self) -> MessageType:
-        """Type of this message."""
-        return ExperimentMessageType.TELEMETRY
-
-
-@dataclass
-class GetTelemetryMessage(Message):
-    """Message used to send telemetry data to the server."""
-
-    cycle_id: CycleID
-
-    @property
-    def type(self) -> MessageType:
-        """Type of this message."""
-        return ExperimentMessageType.GET_TELEMETRY
-
 
 def speedtest(fn: Callable, *args) -> Tuple[Any, int]:
     """
@@ -56,7 +29,7 @@ def speedtest(fn: Callable, *args) -> Tuple[Any, int]:
     :param args: arguments used to call function
     :return: function result, time it took
     """
-    start = time.clock()
+    start = time.process_time()
     res = fn(args)
-    end = time.clock()
+    end = time.process_time()
     return res, end - start
