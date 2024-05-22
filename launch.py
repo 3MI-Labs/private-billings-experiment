@@ -48,6 +48,14 @@ def launch_market(address, cyc_len, handler: BaseRequestHandler):
 
 if __name__ == "__main__":
     type_ = sys.argv[1]
+    
+    # market address
+    market_host = sys.argv[2]
+    market_port = int(sys.argv[3])
+    market_address = market_host, market_port
+    
+    # server host
+    host = sys.argv[4]
 
     # Specify logging setup
     logging.basicConfig()
@@ -57,15 +65,16 @@ if __name__ == "__main__":
     # Settings
     cyc_len = 672  # nr of 15m slots in a week.
 
-    market_address = "0.0.0.0", 5559
     match type_:
         case "bill":
-            address = "0.0.0.0", 5554
+            address = host, 5554
             launch_server(address, market_address, ExperimentServer)
         case "peer":
-            address = "0.0.0.0", 5565
+            port = int(sys.argv[5])
+            address = host, port
             launch_server(address, market_address, ExperimentPeer)
         case "market":
-            launch_market(market_address, cyc_len, ExperimentOperator)
+            address = host, 5555
+            launch_market(address, cyc_len, ExperimentOperator)
         case _:
             raise ValueError(f"{type_} is invalid type")
