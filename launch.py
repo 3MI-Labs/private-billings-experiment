@@ -1,80 +1,46 @@
+from pathlib import Path
 import sys
-from time import sleep
-import logging
-from socketserver import BaseRequestHandler, TCPServer
-from threading import Thread
-from private_billing.messages import BootMessage
-from private_billing.server.message_handler import MessageSender, Target
-from src.experiment import (
-    ExperimentServer,
-    ExperimentOperator,
-    ExperimentPeer,
-    ExperimentOperatorDataStore,
-)
+from private_billing.server import TCPAddress
+from src.experiment import ExperimentEdge, ExperimentCore
+from private_billing.log import logger
 
 
-def launch_server(address, market_address, handler: BaseRequestHandler):
-    def serve():
-        with TCPServer(address, handler, True) as server:
-            print(f"serving on {address}")
-            server.serve_forever()
+def launch_core(address: TCPAddress, args) -> None:
+    core = ExperimentCore(address)
 
-    # Launch server
-    thread = Thread(target=serve)
-    thread.start()
+    # Get market address
+    market_host = args[4] or "localhost"
+    market_port = int(args[5] or 5555)
+    market_address = TCPAddress(market_host, market_port)
 
-    # Allow server to boot up
-    sleep(0.5)
+    # Setup data file
+    data_file = Path(args[6] or "data/user_0.json")
+    core.consumption_data_file = data_file
 
-    # Send boot message
-    msg = BootMessage(market_address)
-    server = Target(None, address)
-    resp = MessageSender.send(msg, server)
-    logger.debug(f"booted server: {resp}")
+    # Start
+    logger.debug(f"booting core @ {address}...")
+    core.start(market_address)
 
 
-def launch_market(address, cyc_len, handler: BaseRequestHandler):
-    with TCPServer(address, handler, True) as server:
-        print(f"serving on {address}")
-
-        # Setup server
-        mods = ExperimentOperatorDataStore()
-        mods.cycle_length = cyc_len
-        server.data = mods
-
-        # Launch
-        server.serve_forever()
+def launch_edge(address: TCPAddress, args) -> None:
+    # Launch edge
+    cyc_len = int(args[4] or 672)
+    edge = ExperimentEdge(address, cyc_len)
+    logger.debug(f"booting edge @ {address}...")
+    edge.start()
 
 
 if __name__ == "__main__":
-    type_ = sys.argv[1]
-    
-    # market address
-    market_host = sys.argv[2]
-    market_port = int(sys.argv[3])
-    market_address = market_host, market_port
-    
-    # server host
-    host = sys.argv[4]
-
-    # Specify logging setup
-    logging.basicConfig()
-    logger = logging.getLogger(__name__)
-    logger.setLevel(logging.DEBUG)
-
-    # Settings
-    cyc_len = 672  # nr of 15m slots in a week.
+    args = sys.argv + [None] * 5
+    type_ = args[1]
+    host = args[2] or "localhost"
+    port = int(args[3] or 5555)
+    address = TCPAddress(host, port)
 
     match type_:
-        case "bill":
-            address = host, 5554
-            launch_server(address, market_address, ExperimentServer)
-        case "peer":
-            port = int(sys.argv[5])
-            address = host, port
-            launch_server(address, market_address, ExperimentPeer)
-        case "market":
-            address = host, 5555
-            launch_market(address, cyc_len, ExperimentOperator)
+        case "core":
+            launch_core(address, args)
+        case "edge":
+            launch_edge(address, args)
         case _:
             raise ValueError(f"{type_} is invalid type")
