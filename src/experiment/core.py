@@ -3,12 +3,20 @@ import pickle
 import time
 from private_billing import CoreServer
 from private_billing import CycleID, Data
+from private_billing.core import HiddenData
 from private_billing.core.hiding import HidingContext
-from private_billing.network import NodeInfo, PeerToPeerBillingBaseServer, no_verification_required
+from private_billing.core.utils import vector
+from private_billing.network import (
+    NodeInfo,
+    PeerToPeerBillingBaseServer,
+    no_verification_required,
+)
 from private_billing.messages import (
     BillMessage,
     ConnectMessage,
     DataMessage,
+    HiddenBillMessage,
+    HiddenDataMessage,
     SeedMessage,
     ContextMessage,
 )
@@ -18,9 +26,11 @@ from .experiment import (
     speedtest,
 )
 from .telemetry import TelemetryType, TelemetryMessage
+from private_billing.log import full_stack, logger
+
 
 class ExperimentCore(CoreServer):
-    
+
     def __post_init__(self) -> None:
         super().__post_init__()
         self.bootstrap_start = None
@@ -32,7 +42,7 @@ class ExperimentCore(CoreServer):
             ExperimentMessageType.START_BOOTSTRAP: self.handle_start_bootstrap,
         }
         return {**super().handlers, **new_handlers}
-    
+
     @no_verification_required
     def handle_connect(self, msg: ConnectMessage, origin: NodeInfo) -> None:
         PeerToPeerBillingBaseServer.handle_connect(self, msg, origin)
@@ -52,8 +62,29 @@ class ExperimentCore(CoreServer):
         self.bootstrap_start = time.process_time()
 
         # Send seeds to all connected peers
-        for peer in self.network_cores:
+        peers = set(self.network_peers).difference(self.network_edges)
+        for peer in peers:
             self.try_send_seed(peer)
+
+        # See if we received all seeds
+        if self.finalized_seed_exchange:
+            self.send_bootstrap_telemetry()
+
+    def send_bootstrap_telemetry(self) -> None:
+        # Send telemetry data to edge
+        bootstrap_end = time.process_time()
+        bootstrap_time = bootstrap_end - self.bootstrap_start
+        telemetry_msg = TelemetryMessage(
+            self.address, self.id, -1, TelemetryType.BOOTSTRAP, bootstrap_time
+        )
+        self.broadcast(telemetry_msg, self.network_edges)
+
+    @property
+    def finalized_seed_exchange(self):
+        nr_seeds = len(self.hc.mask_generator.owned_seeds)
+        expected_nr_seeds = len(list(self.network_cores)) - 1
+        logger.debug(f"thusfar received {nr_seeds=}/{expected_nr_seeds}")
+        return nr_seeds == expected_nr_seeds
 
     ### Handle incoming seed message
 
@@ -64,13 +95,9 @@ class ExperimentCore(CoreServer):
         if not self.hc.is_ready:
             return
 
-        # Send telemetry data to edge
-        bootstrap_end = time.process_time()
-        bootstrap_time = bootstrap_end - self.bootstrap_start
-        telemetry_msg = TelemetryMessage(
-            self.id, -1, TelemetryType.BOOTSTRAP, bootstrap_time
-        )
-        self.broadcast(telemetry_msg, self.network_edges)
+        # See if we received all seeds
+        if self.finalized_seed_exchange:
+            self.send_bootstrap_telemetry()
 
     @no_verification_required
     def handle_cycle_context(self, msg: ContextMessage, origin: NodeInfo) -> None:
@@ -78,31 +105,49 @@ class ExperimentCore(CoreServer):
         context = msg.context
 
         # Use this as a cue to start sending data for the specified cycle.
+        logger.info("loading data")
         data = self.load_data(context.cycle_id)
+        self.handle_data(DataMessage(None, data))
 
-        # Encrypt data
-        hidden_data, hiding_time = speedtest(data.hide, self.hc)
+    def hide_data(self, data: Data) -> HiddenData:
+        """Send telemetry about data hiding prodecure"""
+        hidden_data, hiding_time = speedtest(self.hide_data, data)
 
-        # Send out data
-        data_msg = DataMessage(hidden_data)
-        self.broadcast(data_msg, self.network_edges)
-
-        # Send telemetry data
+        # Send telemetry data about this procedure
         telemetry_msg = TelemetryMessage(
-            self.id, hidden_data.cycle_id, TelemetryType.ENCRYPT, hiding_time
+            self.address,
+            self.id,
+            hidden_data.cycle_id,
+            TelemetryType.ENCRYPT,
+            hiding_time,
         )
         self.broadcast(telemetry_msg, self.network_edges)
 
-    def handle_hidden_bill(self, msg: BillMessage, origin: NodeInfo):
-        _, reveal_time = speedtest(super().handle_hidden_bill, msg, origin)
+        return hidden_data
 
-        # Send telemetry data
-        telemetry_msg = TelemetryMessage(
-            self.id, msg.bill.cycle_id, TelemetryType.DECRYPT, reveal_time
-        )
-        self.broadcast(telemetry_msg, self.network_edges)
+    def handle_hidden_bill(self, msg: HiddenBillMessage, origin: NodeInfo):
+        try:
+            _, reveal_time = speedtest(super().handle_hidden_bill, msg, origin)
+
+            # Send telemetry data
+            telemetry_msg = TelemetryMessage(
+                self.address,
+                self.id,
+                msg.hidden_bill.cycle_id,
+                TelemetryType.DECRYPT,
+                reveal_time,
+            )
+            self.broadcast(telemetry_msg, self.network_edges)
+        except Exception as e:
+            logger.error(str(e))
+            logger.debug(full_stack())
 
     def load_data(self, cycle_id: CycleID) -> Data:
         """Load data from file"""
-        data: list = pickle.load(self.consumption_data_file)
-        return data[cycle_id]
+        import json
+
+        with self.consumption_data_file.open() as fp:
+            data = json.load(fp)
+        utilizations = vector(data["utilization"].values())
+        promises = vector(data["utilization promise"].values())
+        return Data(self.id, cycle_id, promises, utilizations)

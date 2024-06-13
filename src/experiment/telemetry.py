@@ -3,7 +3,8 @@ import time
 from dataclasses import dataclass
 from typing import Any
 from private_billing import CycleID
-from private_billing.server import Target, MessageType, Message
+from private_billing.network import NodeInfo
+from private_billing.server import MessageType, Message
 from private_billing.core import ClientID
 from .experiment import ExperimentMessageType
 
@@ -48,10 +49,10 @@ class TelemetryDataStore:
     def __init__(self):
         self.data = {}
 
-    def store(self, msg: TelemetryMessage, origin: Target) -> None:
-        arrival_time = time.clock()
+    def store(self, msg: TelemetryMessage, origin: NodeInfo) -> None:
+        arrival_time = time.time()
         self.data.setdefault(msg.cycle_id, {})
-        k = (msg.telemetry_type, origin)
+        k = (msg.telemetry_type, origin.id)
         self.data[msg.cycle_id][k] = (arrival_time, msg)
 
     def aggregate(self, cycle_id: CycleID) -> list:
