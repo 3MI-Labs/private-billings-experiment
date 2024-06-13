@@ -107,11 +107,11 @@ class ExperimentCore(CoreServer):
         # Use this as a cue to start sending data for the specified cycle.
         logger.info("loading data")
         data = self.load_data(context.cycle_id)
-        self.handle_data(DataMessage(None, data))
+        self.handle_data(DataMessage(None, data), origin)
 
     def hide_data(self, data: Data) -> HiddenData:
         """Send telemetry about data hiding prodecure"""
-        hidden_data, hiding_time = speedtest(self.hide_data, data)
+        hidden_data, hiding_time = speedtest(super().hide_data, data)
 
         # Send telemetry data about this procedure
         telemetry_msg = TelemetryMessage(
