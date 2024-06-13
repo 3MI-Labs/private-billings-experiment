@@ -1,5 +1,4 @@
 from pathlib import Path
-import pickle
 import time
 from private_billing import CoreServer
 from private_billing import CycleID, Data
@@ -12,11 +11,9 @@ from private_billing.network import (
     no_verification_required,
 )
 from private_billing.messages import (
-    BillMessage,
     ConnectMessage,
     DataMessage,
     HiddenBillMessage,
-    HiddenDataMessage,
     SeedMessage,
     ContextMessage,
 )
@@ -89,6 +86,9 @@ class ExperimentCore(CoreServer):
     ### Handle incoming seed message
 
     def handle_seed(self, msg: SeedMessage, origin: NodeInfo) -> None:
+        if not self.bootstrap_start:
+            self.bootstrap_start = time.process_time()
+        
         super().handle_seed(msg, origin)
 
         # See if we received all seeds

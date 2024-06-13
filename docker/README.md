@@ -2,7 +2,7 @@
 
 To build the application as a Docker, navigate to the root of this package and execute the following command
 ```sh
-sudo docker build -t billing-experiment -f docker/DockerFile .
+sudo docker build -t billing-experiment -f docker/Dockerfile .
 ```
 
 To spawn a container, execute

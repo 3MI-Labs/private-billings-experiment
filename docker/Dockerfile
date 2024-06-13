@@ -17,10 +17,10 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install PyBind11
-RUN pip3 install "pybind11[global]"
+RUN python3 -m pip install "pybind11[global]"
 	
 # Install JupyterLab
-RUN python3 -m pip install --no-cache-dir jupyterlab
+# RUN python3 -m pip install --no-cache-dir jupyterlab
 
 # Clone and build OpenFHE-development
 RUN git clone https://github.com/openfheorg/openfhe-development.git \
@@ -38,6 +38,7 @@ ENV LD_LIBRARY_PATH=/usr/local/lib:${LD_LIBRARY_PATH}
 # Clone and build OpenFHE-Python
 RUN git clone https://github.com/openfheorg/openfhe-python.git \
     && cd openfhe-python \
+    && git checkout 87700c2c250ff39eaaa5cbe4daed3e5cb5d9b726 \
     && mkdir build \
     && cd build \
     && cmake .. \
@@ -46,22 +47,24 @@ RUN git clone https://github.com/openfheorg/openfhe-python.git \
 
 ENV PYTHONPATH=/usr/lib/python3/dist-packages:${PYTHONPATH}
 
-# Install the application dependencies
-COPY deps/private-billings/requirements.txt ./
-RUN pip3 install --no-cache-dir -r requirements.txt
-
 # Install the private-billings repository
 COPY deps/private-billings private-billings/
 RUN python3 -m pip install private-billings/
-
 ENV PYTHONPATH=private-billings/src:${PYTHONPATH}
+
+# Install the private-billlings dependencies
+COPY deps/private-billings/requirements.txt ./
+RUN python3 -m pip install --no-cache-dir -r requirements.txt
 
 # Copy in the source code
 COPY src ./src
-COPY launch.py ./launch.py
+COPY docker/launch.py ./launch.py
+
+# Copy in the data sets
+COPY data ./data
 
 # Setup an app user so the container doesn't run as the root user
 RUN useradd app
 USER app
 
-CMD python3 ./launch.py $PRIVATE_BILLING_SERVER_TYPE
+CMD python3 ./launch.py

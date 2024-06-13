@@ -1,5 +1,6 @@
 from pathlib import Path
 import logging
+from time import sleep
 from private_billing.server.request_reply import TCPAddress
 from src.experiment import ExperimentCore, ExperimentEdge
 import os
@@ -11,18 +12,23 @@ logger.setLevel(os.environ.get("DEBUG_LEVEL", logging.DEBUG))
 def launch_core(address: TCPAddress) -> None:
     core = ExperimentCore(address)
 
-    # Get market address
-    market_host = os.environ.get("MARKET_HOST", "market")
-    market_port = int(os.environ.get("MARKET_PORT", 5555))
-    market_address = TCPAddress(market_host, market_port)
+    # Get edge address
+    edge_host = os.environ.get("EDGE_HOST", "edge")
+    edge_port = int(os.environ.get("EDGE_PORT", 5555))
+    edge_address = TCPAddress(edge_host, edge_port)
 
     # Setup data file
-    data_file = Path(os.environ.get("PEER_DATA_LOCATION"))
+    data_file = Path(os.environ.get("CORE_DATA_LOCATION"))
     core.consumption_data_file = data_file
+    
+    # Random back-off
+    import random
+    factor = int(os.environ.get("RANDOM_BACK_OFF_FACTOR", 100))
+    sleep(factor * random.random())
 
     # Start
     logger.debug(f"booting core @ {address}...")
-    core.start(market_address)
+    core.start(edge_address)
 
 
 def launch_edge(address: TCPAddress) -> None:
@@ -41,10 +47,12 @@ if __name__ == "__main__":
     port = int(os.environ.get("PORT"))
     address = TCPAddress(host, port)
 
+    print(type(server_type), server_type)
+
     match server_type:
         case "core":
             launch_core(address)
         case "edge":
             launch_edge(address)
         case _:
-            raise ValueError(f"{server_type} is invalid type")
+            raise ValueError(f"{server_type}, {type(server_type)} is invalid type")
