@@ -27,7 +27,6 @@ services:
         - EDGE_PORT=5555
         - DEBUG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_0.json
-        - RANDOM_BACK_OFF_FACTOR=100
     command: python3 launch.py
     networks:
         - experiment
@@ -44,7 +43,6 @@ services:
         - EDGE_PORT=5555
         - DEBUG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_1.json
-        - RANDOM_BACK_OFF_FACTOR=100
     command: python3 launch.py
     networks:
         - experiment
@@ -61,7 +59,6 @@ services:
         - EDGE_PORT=5555
         - DEBUG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_2.json
-        - RANDOM_BACK_OFF_FACTOR=100
     command: python3 launch.py
     networks:
         - experiment
@@ -78,7 +75,6 @@ services:
         - EDGE_PORT=5555
         - DEBUG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_3.json
-        - RANDOM_BACK_OFF_FACTOR=100
     command: python3 launch.py
     networks:
         - experiment
@@ -95,7 +91,6 @@ services:
         - EDGE_PORT=5555
         - DEBUG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_4.json
-        - RANDOM_BACK_OFF_FACTOR=100
     command: python3 launch.py
     networks:
         - experiment
@@ -112,7 +107,6 @@ services:
         - EDGE_PORT=5555
         - DEBUG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_5.json
-        - RANDOM_BACK_OFF_FACTOR=100
     command: python3 launch.py
     networks:
         - experiment
@@ -129,7 +123,6 @@ services:
         - EDGE_PORT=5555
         - DEBUG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_6.json
-        - RANDOM_BACK_OFF_FACTOR=100
     command: python3 launch.py
     networks:
         - experiment
@@ -146,7 +139,6 @@ services:
         - EDGE_PORT=5555
         - DEBUG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_7.json
-        - RANDOM_BACK_OFF_FACTOR=100
     command: python3 launch.py
     networks:
         - experiment
@@ -163,7 +155,6 @@ services:
         - EDGE_PORT=5555
         - DEBUG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_8.json
-        - RANDOM_BACK_OFF_FACTOR=100
     command: python3 launch.py
     networks:
         - experiment
@@ -180,1540 +171,1449 @@ services:
         - EDGE_PORT=5555
         - DEBUG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_9.json
-        - RANDOM_BACK_OFF_FACTOR=100
     command: python3 launch.py
     networks:
         - experiment
 
-  # core10:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5570:5570
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core10
-  #       - PORT=5570
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_10.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core11:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5571:5571
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core11
-  #       - PORT=5571
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_11.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core12:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5572:5572
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core12
-  #       - PORT=5572
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_12.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core13:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5573:5573
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core13
-  #       - PORT=5573
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_13.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core14:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5574:5574
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core14
-  #       - PORT=5574
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_14.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core15:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5575:5575
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core15
-  #       - PORT=5575
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_15.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core16:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5576:5576
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core16
-  #       - PORT=5576
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_16.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core17:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5577:5577
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core17
-  #       - PORT=5577
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_17.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core18:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5578:5578
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core18
-  #       - PORT=5578
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_18.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core19:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5579:5579
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core19
-  #       - PORT=5579
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_19.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core20:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5580:5580
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core20
-  #       - PORT=5580
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_20.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core21:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5581:5581
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core21
-  #       - PORT=5581
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_21.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core22:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5582:5582
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core22
-  #       - PORT=5582
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_22.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core23:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5583:5583
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core23
-  #       - PORT=5583
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_23.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core24:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5584:5584
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core24
-  #       - PORT=5584
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_24.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core25:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5585:5585
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core25
-  #       - PORT=5585
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_25.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core26:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5586:5586
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core26
-  #       - PORT=5586
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_26.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core27:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5587:5587
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core27
-  #       - PORT=5587
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_27.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core28:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5588:5588
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core28
-  #       - PORT=5588
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_28.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core29:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5589:5589
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core29
-  #       - PORT=5589
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_29.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core30:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5590:5590
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core30
-  #       - PORT=5590
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_30.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core31:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5591:5591
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core31
-  #       - PORT=5591
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_31.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core32:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5592:5592
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core32
-  #       - PORT=5592
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_32.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core33:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5593:5593
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core33
-  #       - PORT=5593
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_33.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core34:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5594:5594
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core34
-  #       - PORT=5594
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_34.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core35:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5595:5595
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core35
-  #       - PORT=5595
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_35.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core36:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5596:5596
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core36
-  #       - PORT=5596
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_36.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core37:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5597:5597
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core37
-  #       - PORT=5597
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_37.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core38:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5598:5598
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core38
-  #       - PORT=5598
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_38.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core39:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5599:5599
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core39
-  #       - PORT=5599
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_39.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core40:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5600:5600
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core40
-  #       - PORT=5600
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_40.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core41:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5601:5601
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core41
-  #       - PORT=5601
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_41.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core42:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5602:5602
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core42
-  #       - PORT=5602
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_42.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core43:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5603:5603
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core43
-  #       - PORT=5603
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_43.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core44:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5604:5604
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core44
-  #       - PORT=5604
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_44.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core45:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5605:5605
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core45
-  #       - PORT=5605
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_45.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core46:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5606:5606
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core46
-  #       - PORT=5606
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_46.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core47:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5607:5607
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core47
-  #       - PORT=5607
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_47.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core48:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5608:5608
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core48
-  #       - PORT=5608
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_48.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core49:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5609:5609
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core49
-  #       - PORT=5609
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_49.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core50:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5610:5610
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core50
-  #       - PORT=5610
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_50.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core51:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5611:5611
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core51
-  #       - PORT=5611
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_51.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core52:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5612:5612
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core52
-  #       - PORT=5612
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_52.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core53:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5613:5613
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core53
-  #       - PORT=5613
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_53.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core54:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5614:5614
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core54
-  #       - PORT=5614
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_54.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core55:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5615:5615
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core55
-  #       - PORT=5615
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_55.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core56:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5616:5616
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core56
-  #       - PORT=5616
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_56.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core57:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5617:5617
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core57
-  #       - PORT=5617
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_57.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core58:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5618:5618
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core58
-  #       - PORT=5618
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_58.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core59:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5619:5619
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core59
-  #       - PORT=5619
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_59.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core60:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5620:5620
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core60
-  #       - PORT=5620
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_60.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core61:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5621:5621
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core61
-  #       - PORT=5621
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_61.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core62:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5622:5622
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core62
-  #       - PORT=5622
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_62.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core63:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5623:5623
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core63
-  #       - PORT=5623
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_63.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core64:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5624:5624
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core64
-  #       - PORT=5624
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_64.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core65:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5625:5625
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core65
-  #       - PORT=5625
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_65.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core66:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5626:5626
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core66
-  #       - PORT=5626
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_66.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core67:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5627:5627
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core67
-  #       - PORT=5627
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_67.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core68:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5628:5628
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core68
-  #       - PORT=5628
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_68.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core69:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5629:5629
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core69
-  #       - PORT=5629
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_69.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core70:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5630:5630
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core70
-  #       - PORT=5630
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_70.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core71:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5631:5631
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core71
-  #       - PORT=5631
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_71.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core72:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5632:5632
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core72
-  #       - PORT=5632
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_72.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core73:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5633:5633
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core73
-  #       - PORT=5633
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_73.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core74:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5634:5634
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core74
-  #       - PORT=5634
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_74.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core75:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5635:5635
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core75
-  #       - PORT=5635
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_75.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core76:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5636:5636
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core76
-  #       - PORT=5636
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_76.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core77:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5637:5637
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core77
-  #       - PORT=5637
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_77.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core78:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5638:5638
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core78
-  #       - PORT=5638
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_78.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core79:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5639:5639
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core79
-  #       - PORT=5639
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_79.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core80:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5640:5640
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core80
-  #       - PORT=5640
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_80.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core81:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5641:5641
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core81
-  #       - PORT=5641
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_81.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core82:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5642:5642
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core82
-  #       - PORT=5642
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_82.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core83:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5643:5643
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core83
-  #       - PORT=5643
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_83.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core84:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5644:5644
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core84
-  #       - PORT=5644
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_84.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core85:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5645:5645
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core85
-  #       - PORT=5645
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_85.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core86:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5646:5646
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core86
-  #       - PORT=5646
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_86.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core87:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5647:5647
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core87
-  #       - PORT=5647
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_87.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core88:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5648:5648
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core88
-  #       - PORT=5648
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_88.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core89:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5649:5649
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core89
-  #       - PORT=5649
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_89.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core90:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5650:5650
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core90
-  #       - PORT=5650
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_90.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core91:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5651:5651
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core91
-  #       - PORT=5651
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_91.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core92:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5652:5652
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core92
-  #       - PORT=5652
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_92.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core93:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5653:5653
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core93
-  #       - PORT=5653
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_93.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core94:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5654:5654
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core94
-  #       - PORT=5654
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_94.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core95:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5655:5655
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core95
-  #       - PORT=5655
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_95.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core96:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5656:5656
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core96
-  #       - PORT=5656
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_96.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core97:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5657:5657
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core97
-  #       - PORT=5657
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_97.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core98:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5658:5658
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core98
-  #       - PORT=5658
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_98.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
-
-  # core99:
-  #   image: billing-experiment:0.0.2
-  #   ports:
-  #       - 5659:5659
-  #   environment:
-  #       - SERVER_TYPE=core
-  #       - HOST=core99
-  #       - PORT=5659
-  #       - EDGE_HOST=edge
-  #       - EDGE_PORT=5555
-  #       - DEBUG_LEVEL=DEBUG
-  #       - CORE_DATA_LOCATION=/data/user_99.json
-  #       - RANDOM_BACK_OFF_FACTOR=100
-  #   command: python3 launch.py
-  #   networks:
-  #       - experiment
+  core10:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5570:5570
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core10
+        - PORT=5570
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_10.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core11:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5571:5571
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core11
+        - PORT=5571
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_11.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core12:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5572:5572
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core12
+        - PORT=5572
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_12.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core13:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5573:5573
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core13
+        - PORT=5573
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_13.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core14:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5574:5574
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core14
+        - PORT=5574
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_14.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core15:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5575:5575
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core15
+        - PORT=5575
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_15.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core16:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5576:5576
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core16
+        - PORT=5576
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_16.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core17:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5577:5577
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core17
+        - PORT=5577
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_17.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core18:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5578:5578
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core18
+        - PORT=5578
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_18.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core19:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5579:5579
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core19
+        - PORT=5579
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_19.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core20:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5580:5580
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core20
+        - PORT=5580
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_20.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core21:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5581:5581
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core21
+        - PORT=5581
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_21.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core22:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5582:5582
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core22
+        - PORT=5582
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_22.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core23:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5583:5583
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core23
+        - PORT=5583
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_23.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core24:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5584:5584
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core24
+        - PORT=5584
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_24.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core25:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5585:5585
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core25
+        - PORT=5585
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_25.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core26:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5586:5586
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core26
+        - PORT=5586
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_26.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core27:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5587:5587
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core27
+        - PORT=5587
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_27.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core28:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5588:5588
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core28
+        - PORT=5588
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_28.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core29:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5589:5589
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core29
+        - PORT=5589
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_29.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core30:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5590:5590
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core30
+        - PORT=5590
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_30.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core31:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5591:5591
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core31
+        - PORT=5591
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_31.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core32:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5592:5592
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core32
+        - PORT=5592
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_32.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core33:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5593:5593
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core33
+        - PORT=5593
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_33.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core34:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5594:5594
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core34
+        - PORT=5594
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_34.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core35:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5595:5595
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core35
+        - PORT=5595
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_35.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core36:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5596:5596
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core36
+        - PORT=5596
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_36.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core37:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5597:5597
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core37
+        - PORT=5597
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_37.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core38:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5598:5598
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core38
+        - PORT=5598
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_38.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core39:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5599:5599
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core39
+        - PORT=5599
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_39.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core40:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5600:5600
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core40
+        - PORT=5600
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_40.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core41:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5601:5601
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core41
+        - PORT=5601
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_41.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core42:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5602:5602
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core42
+        - PORT=5602
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_42.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core43:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5603:5603
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core43
+        - PORT=5603
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_43.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core44:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5604:5604
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core44
+        - PORT=5604
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_44.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core45:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5605:5605
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core45
+        - PORT=5605
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_45.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core46:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5606:5606
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core46
+        - PORT=5606
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_46.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core47:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5607:5607
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core47
+        - PORT=5607
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_47.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core48:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5608:5608
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core48
+        - PORT=5608
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_48.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core49:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5609:5609
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core49
+        - PORT=5609
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_49.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core50:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5610:5610
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core50
+        - PORT=5610
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_50.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core51:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5611:5611
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core51
+        - PORT=5611
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_51.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core52:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5612:5612
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core52
+        - PORT=5612
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_52.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core53:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5613:5613
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core53
+        - PORT=5613
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_53.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core54:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5614:5614
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core54
+        - PORT=5614
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_54.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core55:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5615:5615
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core55
+        - PORT=5615
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_55.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core56:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5616:5616
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core56
+        - PORT=5616
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_56.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core57:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5617:5617
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core57
+        - PORT=5617
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_57.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core58:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5618:5618
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core58
+        - PORT=5618
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_58.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core59:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5619:5619
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core59
+        - PORT=5619
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_59.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core60:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5620:5620
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core60
+        - PORT=5620
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_60.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core61:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5621:5621
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core61
+        - PORT=5621
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_61.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core62:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5622:5622
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core62
+        - PORT=5622
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_62.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core63:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5623:5623
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core63
+        - PORT=5623
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_63.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core64:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5624:5624
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core64
+        - PORT=5624
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_64.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core65:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5625:5625
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core65
+        - PORT=5625
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_65.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core66:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5626:5626
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core66
+        - PORT=5626
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_66.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core67:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5627:5627
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core67
+        - PORT=5627
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_67.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core68:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5628:5628
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core68
+        - PORT=5628
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_68.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core69:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5629:5629
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core69
+        - PORT=5629
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_69.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core70:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5630:5630
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core70
+        - PORT=5630
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_70.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core71:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5631:5631
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core71
+        - PORT=5631
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_71.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core72:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5632:5632
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core72
+        - PORT=5632
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_72.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core73:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5633:5633
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core73
+        - PORT=5633
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_73.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core74:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5634:5634
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core74
+        - PORT=5634
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_74.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core75:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5635:5635
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core75
+        - PORT=5635
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_75.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core76:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5636:5636
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core76
+        - PORT=5636
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_76.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core77:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5637:5637
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core77
+        - PORT=5637
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_77.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core78:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5638:5638
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core78
+        - PORT=5638
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_78.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core79:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5639:5639
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core79
+        - PORT=5639
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_79.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core80:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5640:5640
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core80
+        - PORT=5640
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_80.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core81:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5641:5641
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core81
+        - PORT=5641
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_81.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core82:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5642:5642
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core82
+        - PORT=5642
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_82.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core83:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5643:5643
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core83
+        - PORT=5643
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_83.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core84:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5644:5644
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core84
+        - PORT=5644
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_84.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core85:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5645:5645
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core85
+        - PORT=5645
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_85.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core86:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5646:5646
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core86
+        - PORT=5646
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_86.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core87:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5647:5647
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core87
+        - PORT=5647
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_87.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core88:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5648:5648
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core88
+        - PORT=5648
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_88.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core89:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5649:5649
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core89
+        - PORT=5649
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_89.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core90:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5650:5650
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core90
+        - PORT=5650
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_90.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core91:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5651:5651
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core91
+        - PORT=5651
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_91.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core92:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5652:5652
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core92
+        - PORT=5652
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_92.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core93:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5653:5653
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core93
+        - PORT=5653
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_93.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core94:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5654:5654
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core94
+        - PORT=5654
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_94.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core95:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5655:5655
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core95
+        - PORT=5655
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_95.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core96:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5656:5656
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core96
+        - PORT=5656
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_96.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core97:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5657:5657
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core97
+        - PORT=5657
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_97.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core98:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5658:5658
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core98
+        - PORT=5658
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_98.json
+    command: python3 launch.py
+    networks:
+        - experiment
+
+  core99:
+    image: billing-experiment:0.0.2
+    ports:
+        - 5659:5659
+    environment:
+        - SERVER_TYPE=core
+        - HOST=core99
+        - PORT=5659
+        - EDGE_HOST=edge
+        - EDGE_PORT=5555
+        - DEBUG_LEVEL=DEBUG
+        - CORE_DATA_LOCATION=/data/user_99.json
+    command: python3 launch.py
+    networks:
+        - experiment
 
 
 networks:

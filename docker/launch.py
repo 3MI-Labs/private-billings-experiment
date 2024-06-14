@@ -20,12 +20,6 @@ def launch_core(address: TCPAddress) -> None:
     # Setup data file
     data_file = Path(os.environ.get("CORE_DATA_LOCATION"))
     core.consumption_data_file = data_file
-    
-    # Random back-off
-    import random
-    factor = int(os.environ.get("RANDOM_BACK_OFF_FACTOR", 100))
-    sleep(factor * random.random())
-
     # Start
     logger.debug(f"booting core @ {address}...")
     core.start(edge_address)

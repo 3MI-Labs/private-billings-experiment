@@ -1,3 +1,4 @@
+import random
 from pathlib import Path
 import time
 from private_billing import CoreServer
@@ -7,7 +8,6 @@ from private_billing.core.hiding import HidingContext
 from private_billing.core.utils import vector
 from private_billing.network import (
     NodeInfo,
-    PeerToPeerBillingBaseServer,
     no_verification_required,
 )
 from private_billing.messages import (
@@ -16,6 +16,7 @@ from private_billing.messages import (
     HiddenBillMessage,
     SeedMessage,
     ContextMessage,
+    UserType,
 )
 from .experiment import (
     BootStrapMessage,
@@ -42,13 +43,30 @@ class ExperimentCore(CoreServer):
 
     @no_verification_required
     def handle_connect(self, msg: ConnectMessage, origin: NodeInfo) -> None:
-        PeerToPeerBillingBaseServer.handle_connect(self, msg, origin)
+        origin.role = msg.role
+        origin.pk = msg.pk
 
+        # Connect to other peers
+        if origin.role == UserType.CORE:
+            for node in msg.network_state.values():
+                self.register_node(node)
+            return
+
+        # Setup hiding context
         cycle_length = msg.billing_state.get("cycle_length")
         if cycle_length and not self.hc:
             self.hc = HidingContext(cycle_length, self.mg)
-
-        # Do not send seed to peers
+        
+        # Broadcast if you're the last node to join
+        nodes = list(msg.network_state.values())
+        if len(nodes) < 100:
+            return
+        
+        for node in nodes:
+            self.register_node(node)
+        for node in nodes:
+            self.send_connect(node)
+        
 
     ### Handle bootstrap message
 
@@ -59,7 +77,8 @@ class ExperimentCore(CoreServer):
         self.bootstrap_start = time.process_time()
 
         # Send seeds to all connected peers
-        peers = set(self.network_peers).difference(self.network_edges)
+        peers = list(set(self.network_peers).difference(self.network_edges))
+        random.shuffle(peers)
         for peer in peers:
             self.try_send_seed(peer)
 
@@ -88,7 +107,7 @@ class ExperimentCore(CoreServer):
     def handle_seed(self, msg: SeedMessage, origin: NodeInfo) -> None:
         if not self.bootstrap_start:
             self.bootstrap_start = time.process_time()
-        
+
         super().handle_seed(msg, origin)
 
         # See if we received all seeds
