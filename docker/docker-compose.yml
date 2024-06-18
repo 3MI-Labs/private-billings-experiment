@@ -14,13 +14,13 @@ services:
     networks:
       - experiment  
 
- 
   core0:
     image: billing-experiment:0.0.2
     ports:
         - 5560:5560
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core0
         - PORT=5560
         - EDGE_HOST=edge
@@ -37,6 +37,7 @@ services:
         - 5561:5561
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core1
         - PORT=5561
         - EDGE_HOST=edge
@@ -53,6 +54,7 @@ services:
         - 5562:5562
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core2
         - PORT=5562
         - EDGE_HOST=edge
@@ -69,6 +71,7 @@ services:
         - 5563:5563
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core3
         - PORT=5563
         - EDGE_HOST=edge
@@ -85,6 +88,7 @@ services:
         - 5564:5564
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core4
         - PORT=5564
         - EDGE_HOST=edge
@@ -101,6 +105,7 @@ services:
         - 5565:5565
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core5
         - PORT=5565
         - EDGE_HOST=edge
@@ -117,6 +122,7 @@ services:
         - 5566:5566
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core6
         - PORT=5566
         - EDGE_HOST=edge
@@ -133,6 +139,7 @@ services:
         - 5567:5567
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core7
         - PORT=5567
         - EDGE_HOST=edge
@@ -149,6 +156,7 @@ services:
         - 5568:5568
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core8
         - PORT=5568
         - EDGE_HOST=edge
@@ -165,6 +173,7 @@ services:
         - 5569:5569
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core9
         - PORT=5569
         - EDGE_HOST=edge
@@ -181,6 +190,7 @@ services:
         - 5570:5570
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core10
         - PORT=5570
         - EDGE_HOST=edge
@@ -197,6 +207,7 @@ services:
         - 5571:5571
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core11
         - PORT=5571
         - EDGE_HOST=edge
@@ -213,6 +224,7 @@ services:
         - 5572:5572
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core12
         - PORT=5572
         - EDGE_HOST=edge
@@ -229,6 +241,7 @@ services:
         - 5573:5573
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core13
         - PORT=5573
         - EDGE_HOST=edge
@@ -245,6 +258,7 @@ services:
         - 5574:5574
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core14
         - PORT=5574
         - EDGE_HOST=edge
@@ -261,6 +275,7 @@ services:
         - 5575:5575
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core15
         - PORT=5575
         - EDGE_HOST=edge
@@ -277,6 +292,7 @@ services:
         - 5576:5576
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core16
         - PORT=5576
         - EDGE_HOST=edge
@@ -293,6 +309,7 @@ services:
         - 5577:5577
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core17
         - PORT=5577
         - EDGE_HOST=edge
@@ -309,6 +326,7 @@ services:
         - 5578:5578
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core18
         - PORT=5578
         - EDGE_HOST=edge
@@ -325,6 +343,7 @@ services:
         - 5579:5579
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core19
         - PORT=5579
         - EDGE_HOST=edge
@@ -341,6 +360,7 @@ services:
         - 5580:5580
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core20
         - PORT=5580
         - EDGE_HOST=edge
@@ -357,6 +377,7 @@ services:
         - 5581:5581
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core21
         - PORT=5581
         - EDGE_HOST=edge
@@ -373,6 +394,7 @@ services:
         - 5582:5582
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core22
         - PORT=5582
         - EDGE_HOST=edge
@@ -389,6 +411,7 @@ services:
         - 5583:5583
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core23
         - PORT=5583
         - EDGE_HOST=edge
@@ -405,6 +428,7 @@ services:
         - 5584:5584
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core24
         - PORT=5584
         - EDGE_HOST=edge
@@ -421,6 +445,7 @@ services:
         - 5585:5585
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core25
         - PORT=5585
         - EDGE_HOST=edge
@@ -437,6 +462,7 @@ services:
         - 5586:5586
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core26
         - PORT=5586
         - EDGE_HOST=edge
@@ -453,6 +479,7 @@ services:
         - 5587:5587
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core27
         - PORT=5587
         - EDGE_HOST=edge
@@ -469,6 +496,7 @@ services:
         - 5588:5588
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core28
         - PORT=5588
         - EDGE_HOST=edge
@@ -485,6 +513,7 @@ services:
         - 5589:5589
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core29
         - PORT=5589
         - EDGE_HOST=edge
@@ -501,6 +530,7 @@ services:
         - 5590:5590
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core30
         - PORT=5590
         - EDGE_HOST=edge
@@ -517,6 +547,7 @@ services:
         - 5591:5591
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core31
         - PORT=5591
         - EDGE_HOST=edge
@@ -533,6 +564,7 @@ services:
         - 5592:5592
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core32
         - PORT=5592
         - EDGE_HOST=edge
@@ -549,6 +581,7 @@ services:
         - 5593:5593
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core33
         - PORT=5593
         - EDGE_HOST=edge
@@ -565,6 +598,7 @@ services:
         - 5594:5594
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core34
         - PORT=5594
         - EDGE_HOST=edge
@@ -581,6 +615,7 @@ services:
         - 5595:5595
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core35
         - PORT=5595
         - EDGE_HOST=edge
@@ -597,6 +632,7 @@ services:
         - 5596:5596
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core36
         - PORT=5596
         - EDGE_HOST=edge
@@ -613,6 +649,7 @@ services:
         - 5597:5597
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core37
         - PORT=5597
         - EDGE_HOST=edge
@@ -629,6 +666,7 @@ services:
         - 5598:5598
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core38
         - PORT=5598
         - EDGE_HOST=edge
@@ -645,6 +683,7 @@ services:
         - 5599:5599
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core39
         - PORT=5599
         - EDGE_HOST=edge
@@ -661,6 +700,7 @@ services:
         - 5600:5600
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core40
         - PORT=5600
         - EDGE_HOST=edge
@@ -677,6 +717,7 @@ services:
         - 5601:5601
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core41
         - PORT=5601
         - EDGE_HOST=edge
@@ -693,6 +734,7 @@ services:
         - 5602:5602
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core42
         - PORT=5602
         - EDGE_HOST=edge
@@ -709,6 +751,7 @@ services:
         - 5603:5603
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core43
         - PORT=5603
         - EDGE_HOST=edge
@@ -725,6 +768,7 @@ services:
         - 5604:5604
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core44
         - PORT=5604
         - EDGE_HOST=edge
@@ -741,6 +785,7 @@ services:
         - 5605:5605
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core45
         - PORT=5605
         - EDGE_HOST=edge
@@ -757,6 +802,7 @@ services:
         - 5606:5606
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core46
         - PORT=5606
         - EDGE_HOST=edge
@@ -773,6 +819,7 @@ services:
         - 5607:5607
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core47
         - PORT=5607
         - EDGE_HOST=edge
@@ -789,6 +836,7 @@ services:
         - 5608:5608
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core48
         - PORT=5608
         - EDGE_HOST=edge
@@ -805,6 +853,7 @@ services:
         - 5609:5609
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core49
         - PORT=5609
         - EDGE_HOST=edge
@@ -821,6 +870,7 @@ services:
         - 5610:5610
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core50
         - PORT=5610
         - EDGE_HOST=edge
@@ -837,6 +887,7 @@ services:
         - 5611:5611
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core51
         - PORT=5611
         - EDGE_HOST=edge
@@ -853,6 +904,7 @@ services:
         - 5612:5612
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core52
         - PORT=5612
         - EDGE_HOST=edge
@@ -869,6 +921,7 @@ services:
         - 5613:5613
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core53
         - PORT=5613
         - EDGE_HOST=edge
@@ -885,6 +938,7 @@ services:
         - 5614:5614
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core54
         - PORT=5614
         - EDGE_HOST=edge
@@ -901,6 +955,7 @@ services:
         - 5615:5615
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core55
         - PORT=5615
         - EDGE_HOST=edge
@@ -917,6 +972,7 @@ services:
         - 5616:5616
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core56
         - PORT=5616
         - EDGE_HOST=edge
@@ -933,6 +989,7 @@ services:
         - 5617:5617
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core57
         - PORT=5617
         - EDGE_HOST=edge
@@ -949,6 +1006,7 @@ services:
         - 5618:5618
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core58
         - PORT=5618
         - EDGE_HOST=edge
@@ -965,6 +1023,7 @@ services:
         - 5619:5619
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core59
         - PORT=5619
         - EDGE_HOST=edge
@@ -981,6 +1040,7 @@ services:
         - 5620:5620
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core60
         - PORT=5620
         - EDGE_HOST=edge
@@ -997,6 +1057,7 @@ services:
         - 5621:5621
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core61
         - PORT=5621
         - EDGE_HOST=edge
@@ -1013,6 +1074,7 @@ services:
         - 5622:5622
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core62
         - PORT=5622
         - EDGE_HOST=edge
@@ -1029,6 +1091,7 @@ services:
         - 5623:5623
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core63
         - PORT=5623
         - EDGE_HOST=edge
@@ -1045,6 +1108,7 @@ services:
         - 5624:5624
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core64
         - PORT=5624
         - EDGE_HOST=edge
@@ -1061,6 +1125,7 @@ services:
         - 5625:5625
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core65
         - PORT=5625
         - EDGE_HOST=edge
@@ -1077,6 +1142,7 @@ services:
         - 5626:5626
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core66
         - PORT=5626
         - EDGE_HOST=edge
@@ -1093,6 +1159,7 @@ services:
         - 5627:5627
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core67
         - PORT=5627
         - EDGE_HOST=edge
@@ -1109,6 +1176,7 @@ services:
         - 5628:5628
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core68
         - PORT=5628
         - EDGE_HOST=edge
@@ -1125,6 +1193,7 @@ services:
         - 5629:5629
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core69
         - PORT=5629
         - EDGE_HOST=edge
@@ -1141,6 +1210,7 @@ services:
         - 5630:5630
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core70
         - PORT=5630
         - EDGE_HOST=edge
@@ -1157,6 +1227,7 @@ services:
         - 5631:5631
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core71
         - PORT=5631
         - EDGE_HOST=edge
@@ -1173,6 +1244,7 @@ services:
         - 5632:5632
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core72
         - PORT=5632
         - EDGE_HOST=edge
@@ -1189,6 +1261,7 @@ services:
         - 5633:5633
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core73
         - PORT=5633
         - EDGE_HOST=edge
@@ -1205,6 +1278,7 @@ services:
         - 5634:5634
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core74
         - PORT=5634
         - EDGE_HOST=edge
@@ -1221,6 +1295,7 @@ services:
         - 5635:5635
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core75
         - PORT=5635
         - EDGE_HOST=edge
@@ -1237,6 +1312,7 @@ services:
         - 5636:5636
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core76
         - PORT=5636
         - EDGE_HOST=edge
@@ -1253,6 +1329,7 @@ services:
         - 5637:5637
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core77
         - PORT=5637
         - EDGE_HOST=edge
@@ -1269,6 +1346,7 @@ services:
         - 5638:5638
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core78
         - PORT=5638
         - EDGE_HOST=edge
@@ -1285,6 +1363,7 @@ services:
         - 5639:5639
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core79
         - PORT=5639
         - EDGE_HOST=edge
@@ -1301,6 +1380,7 @@ services:
         - 5640:5640
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core80
         - PORT=5640
         - EDGE_HOST=edge
@@ -1317,6 +1397,7 @@ services:
         - 5641:5641
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core81
         - PORT=5641
         - EDGE_HOST=edge
@@ -1333,6 +1414,7 @@ services:
         - 5642:5642
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core82
         - PORT=5642
         - EDGE_HOST=edge
@@ -1349,6 +1431,7 @@ services:
         - 5643:5643
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core83
         - PORT=5643
         - EDGE_HOST=edge
@@ -1365,6 +1448,7 @@ services:
         - 5644:5644
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core84
         - PORT=5644
         - EDGE_HOST=edge
@@ -1381,6 +1465,7 @@ services:
         - 5645:5645
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core85
         - PORT=5645
         - EDGE_HOST=edge
@@ -1397,6 +1482,7 @@ services:
         - 5646:5646
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core86
         - PORT=5646
         - EDGE_HOST=edge
@@ -1413,6 +1499,7 @@ services:
         - 5647:5647
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core87
         - PORT=5647
         - EDGE_HOST=edge
@@ -1429,6 +1516,7 @@ services:
         - 5648:5648
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core88
         - PORT=5648
         - EDGE_HOST=edge
@@ -1445,6 +1533,7 @@ services:
         - 5649:5649
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core89
         - PORT=5649
         - EDGE_HOST=edge
@@ -1461,6 +1550,7 @@ services:
         - 5650:5650
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core90
         - PORT=5650
         - EDGE_HOST=edge
@@ -1477,6 +1567,7 @@ services:
         - 5651:5651
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core91
         - PORT=5651
         - EDGE_HOST=edge
@@ -1493,6 +1584,7 @@ services:
         - 5652:5652
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core92
         - PORT=5652
         - EDGE_HOST=edge
@@ -1509,6 +1601,7 @@ services:
         - 5653:5653
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core93
         - PORT=5653
         - EDGE_HOST=edge
@@ -1525,6 +1618,7 @@ services:
         - 5654:5654
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core94
         - PORT=5654
         - EDGE_HOST=edge
@@ -1541,6 +1635,7 @@ services:
         - 5655:5655
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core95
         - PORT=5655
         - EDGE_HOST=edge
@@ -1557,6 +1652,7 @@ services:
         - 5656:5656
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core96
         - PORT=5656
         - EDGE_HOST=edge
@@ -1573,6 +1669,7 @@ services:
         - 5657:5657
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core97
         - PORT=5657
         - EDGE_HOST=edge
@@ -1589,6 +1686,7 @@ services:
         - 5658:5658
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core98
         - PORT=5658
         - EDGE_HOST=edge
@@ -1605,6 +1703,7 @@ services:
         - 5659:5659
     environment:
         - SERVER_TYPE=core
+        - NR_CORE_SERVERS=100
         - HOST=core99
         - PORT=5659
         - EDGE_HOST=edge
@@ -1614,7 +1713,6 @@ services:
     command: python3 launch.py
     networks:
         - experiment
-
 
 networks:
   experiment:

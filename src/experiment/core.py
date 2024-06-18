@@ -1,3 +1,4 @@
+import os
 import random
 from pathlib import Path
 import time
@@ -59,7 +60,7 @@ class ExperimentCore(CoreServer):
         
         # Broadcast if you're the last node to join
         nodes = list(msg.network_state.values())
-        if len(nodes) < 100:
+        if len(nodes) <= int(os.environ.get('NR_CORE_SERVERS')):
             return
         
         for node in nodes:
