@@ -5,7 +5,7 @@ from src.experiment import ExperimentCore, ExperimentEdge
 import os
 from private_billing.log import logger
 
-logger.setLevel(os.environ.get("DEBUG_LEVEL", logging.DEBUG))
+logger.setLevel(os.environ.get("LOG_LEVEL", logging.DEBUG))
 
 
 def launch_core(address: TCPAddress) -> None:

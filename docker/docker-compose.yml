@@ -9,7 +9,7 @@ services:
       - HOST=edge
       - PORT=5555
       - CYCLE_LENGTH=672
-      - DEBUG_LEVEL=DEBUG
+      - LOG_LEVEL=DEBUG
     command: python3 launch.py edge
     networks:
       - experiment  
@@ -25,7 +25,7 @@ services:
         - PORT=5560
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_0.json
     command: python3 launch.py
     networks:
@@ -42,7 +42,7 @@ services:
         - PORT=5561
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_1.json
     command: python3 launch.py
     networks:
@@ -59,7 +59,7 @@ services:
         - PORT=5562
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_2.json
     command: python3 launch.py
     networks:
@@ -76,7 +76,7 @@ services:
         - PORT=5563
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_3.json
     command: python3 launch.py
     networks:
@@ -93,7 +93,7 @@ services:
         - PORT=5564
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_4.json
     command: python3 launch.py
     networks:
@@ -110,7 +110,7 @@ services:
         - PORT=5565
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_5.json
     command: python3 launch.py
     networks:
@@ -127,7 +127,7 @@ services:
         - PORT=5566
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_6.json
     command: python3 launch.py
     networks:
@@ -144,7 +144,7 @@ services:
         - PORT=5567
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_7.json
     command: python3 launch.py
     networks:
@@ -161,7 +161,7 @@ services:
         - PORT=5568
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_8.json
     command: python3 launch.py
     networks:
@@ -178,7 +178,7 @@ services:
         - PORT=5569
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_9.json
     command: python3 launch.py
     networks:
@@ -195,7 +195,7 @@ services:
         - PORT=5570
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_10.json
     command: python3 launch.py
     networks:
@@ -212,7 +212,7 @@ services:
         - PORT=5571
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_11.json
     command: python3 launch.py
     networks:
@@ -229,7 +229,7 @@ services:
         - PORT=5572
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_12.json
     command: python3 launch.py
     networks:
@@ -246,7 +246,7 @@ services:
         - PORT=5573
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_13.json
     command: python3 launch.py
     networks:
@@ -263,7 +263,7 @@ services:
         - PORT=5574
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_14.json
     command: python3 launch.py
     networks:
@@ -280,7 +280,7 @@ services:
         - PORT=5575
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_15.json
     command: python3 launch.py
     networks:
@@ -297,7 +297,7 @@ services:
         - PORT=5576
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_16.json
     command: python3 launch.py
     networks:
@@ -314,7 +314,7 @@ services:
         - PORT=5577
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_17.json
     command: python3 launch.py
     networks:
@@ -331,7 +331,7 @@ services:
         - PORT=5578
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_18.json
     command: python3 launch.py
     networks:
@@ -348,7 +348,7 @@ services:
         - PORT=5579
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_19.json
     command: python3 launch.py
     networks:
@@ -365,7 +365,7 @@ services:
         - PORT=5580
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_20.json
     command: python3 launch.py
     networks:
@@ -382,7 +382,7 @@ services:
         - PORT=5581
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_21.json
     command: python3 launch.py
     networks:
@@ -399,7 +399,7 @@ services:
         - PORT=5582
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_22.json
     command: python3 launch.py
     networks:
@@ -416,7 +416,7 @@ services:
         - PORT=5583
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_23.json
     command: python3 launch.py
     networks:
@@ -433,7 +433,7 @@ services:
         - PORT=5584
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_24.json
     command: python3 launch.py
     networks:
@@ -450,7 +450,7 @@ services:
         - PORT=5585
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_25.json
     command: python3 launch.py
     networks:
@@ -467,7 +467,7 @@ services:
         - PORT=5586
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_26.json
     command: python3 launch.py
     networks:
@@ -484,7 +484,7 @@ services:
         - PORT=5587
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_27.json
     command: python3 launch.py
     networks:
@@ -501,7 +501,7 @@ services:
         - PORT=5588
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_28.json
     command: python3 launch.py
     networks:
@@ -518,7 +518,7 @@ services:
         - PORT=5589
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_29.json
     command: python3 launch.py
     networks:
@@ -535,7 +535,7 @@ services:
         - PORT=5590
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_30.json
     command: python3 launch.py
     networks:
@@ -552,7 +552,7 @@ services:
         - PORT=5591
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_31.json
     command: python3 launch.py
     networks:
@@ -569,7 +569,7 @@ services:
         - PORT=5592
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_32.json
     command: python3 launch.py
     networks:
@@ -586,7 +586,7 @@ services:
         - PORT=5593
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_33.json
     command: python3 launch.py
     networks:
@@ -603,7 +603,7 @@ services:
         - PORT=5594
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_34.json
     command: python3 launch.py
     networks:
@@ -620,7 +620,7 @@ services:
         - PORT=5595
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_35.json
     command: python3 launch.py
     networks:
@@ -637,7 +637,7 @@ services:
         - PORT=5596
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_36.json
     command: python3 launch.py
     networks:
@@ -654,7 +654,7 @@ services:
         - PORT=5597
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_37.json
     command: python3 launch.py
     networks:
@@ -671,7 +671,7 @@ services:
         - PORT=5598
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_38.json
     command: python3 launch.py
     networks:
@@ -688,7 +688,7 @@ services:
         - PORT=5599
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_39.json
     command: python3 launch.py
     networks:
@@ -705,7 +705,7 @@ services:
         - PORT=5600
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_40.json
     command: python3 launch.py
     networks:
@@ -722,7 +722,7 @@ services:
         - PORT=5601
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_41.json
     command: python3 launch.py
     networks:
@@ -739,7 +739,7 @@ services:
         - PORT=5602
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_42.json
     command: python3 launch.py
     networks:
@@ -756,7 +756,7 @@ services:
         - PORT=5603
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_43.json
     command: python3 launch.py
     networks:
@@ -773,7 +773,7 @@ services:
         - PORT=5604
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_44.json
     command: python3 launch.py
     networks:
@@ -790,7 +790,7 @@ services:
         - PORT=5605
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_45.json
     command: python3 launch.py
     networks:
@@ -807,7 +807,7 @@ services:
         - PORT=5606
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_46.json
     command: python3 launch.py
     networks:
@@ -824,7 +824,7 @@ services:
         - PORT=5607
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_47.json
     command: python3 launch.py
     networks:
@@ -841,7 +841,7 @@ services:
         - PORT=5608
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_48.json
     command: python3 launch.py
     networks:
@@ -858,7 +858,7 @@ services:
         - PORT=5609
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_49.json
     command: python3 launch.py
     networks:
@@ -875,7 +875,7 @@ services:
         - PORT=5610
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_50.json
     command: python3 launch.py
     networks:
@@ -892,7 +892,7 @@ services:
         - PORT=5611
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_51.json
     command: python3 launch.py
     networks:
@@ -909,7 +909,7 @@ services:
         - PORT=5612
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_52.json
     command: python3 launch.py
     networks:
@@ -926,7 +926,7 @@ services:
         - PORT=5613
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_53.json
     command: python3 launch.py
     networks:
@@ -943,7 +943,7 @@ services:
         - PORT=5614
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_54.json
     command: python3 launch.py
     networks:
@@ -960,7 +960,7 @@ services:
         - PORT=5615
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_55.json
     command: python3 launch.py
     networks:
@@ -977,7 +977,7 @@ services:
         - PORT=5616
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_56.json
     command: python3 launch.py
     networks:
@@ -994,7 +994,7 @@ services:
         - PORT=5617
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_57.json
     command: python3 launch.py
     networks:
@@ -1011,7 +1011,7 @@ services:
         - PORT=5618
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_58.json
     command: python3 launch.py
     networks:
@@ -1028,7 +1028,7 @@ services:
         - PORT=5619
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_59.json
     command: python3 launch.py
     networks:
@@ -1045,7 +1045,7 @@ services:
         - PORT=5620
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_60.json
     command: python3 launch.py
     networks:
@@ -1062,7 +1062,7 @@ services:
         - PORT=5621
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_61.json
     command: python3 launch.py
     networks:
@@ -1079,7 +1079,7 @@ services:
         - PORT=5622
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_62.json
     command: python3 launch.py
     networks:
@@ -1096,7 +1096,7 @@ services:
         - PORT=5623
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_63.json
     command: python3 launch.py
     networks:
@@ -1113,7 +1113,7 @@ services:
         - PORT=5624
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_64.json
     command: python3 launch.py
     networks:
@@ -1130,7 +1130,7 @@ services:
         - PORT=5625
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_65.json
     command: python3 launch.py
     networks:
@@ -1147,7 +1147,7 @@ services:
         - PORT=5626
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_66.json
     command: python3 launch.py
     networks:
@@ -1164,7 +1164,7 @@ services:
         - PORT=5627
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_67.json
     command: python3 launch.py
     networks:
@@ -1181,7 +1181,7 @@ services:
         - PORT=5628
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_68.json
     command: python3 launch.py
     networks:
@@ -1198,7 +1198,7 @@ services:
         - PORT=5629
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_69.json
     command: python3 launch.py
     networks:
@@ -1215,7 +1215,7 @@ services:
         - PORT=5630
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_70.json
     command: python3 launch.py
     networks:
@@ -1232,7 +1232,7 @@ services:
         - PORT=5631
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_71.json
     command: python3 launch.py
     networks:
@@ -1249,7 +1249,7 @@ services:
         - PORT=5632
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_72.json
     command: python3 launch.py
     networks:
@@ -1266,7 +1266,7 @@ services:
         - PORT=5633
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_73.json
     command: python3 launch.py
     networks:
@@ -1283,7 +1283,7 @@ services:
         - PORT=5634
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_74.json
     command: python3 launch.py
     networks:
@@ -1300,7 +1300,7 @@ services:
         - PORT=5635
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_75.json
     command: python3 launch.py
     networks:
@@ -1317,7 +1317,7 @@ services:
         - PORT=5636
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_76.json
     command: python3 launch.py
     networks:
@@ -1334,7 +1334,7 @@ services:
         - PORT=5637
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_77.json
     command: python3 launch.py
     networks:
@@ -1351,7 +1351,7 @@ services:
         - PORT=5638
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_78.json
     command: python3 launch.py
     networks:
@@ -1368,7 +1368,7 @@ services:
         - PORT=5639
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_79.json
     command: python3 launch.py
     networks:
@@ -1385,7 +1385,7 @@ services:
         - PORT=5640
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_80.json
     command: python3 launch.py
     networks:
@@ -1402,7 +1402,7 @@ services:
         - PORT=5641
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_81.json
     command: python3 launch.py
     networks:
@@ -1419,7 +1419,7 @@ services:
         - PORT=5642
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_82.json
     command: python3 launch.py
     networks:
@@ -1436,7 +1436,7 @@ services:
         - PORT=5643
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_83.json
     command: python3 launch.py
     networks:
@@ -1453,7 +1453,7 @@ services:
         - PORT=5644
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_84.json
     command: python3 launch.py
     networks:
@@ -1470,7 +1470,7 @@ services:
         - PORT=5645
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_85.json
     command: python3 launch.py
     networks:
@@ -1487,7 +1487,7 @@ services:
         - PORT=5646
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_86.json
     command: python3 launch.py
     networks:
@@ -1504,7 +1504,7 @@ services:
         - PORT=5647
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_87.json
     command: python3 launch.py
     networks:
@@ -1521,7 +1521,7 @@ services:
         - PORT=5648
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_88.json
     command: python3 launch.py
     networks:
@@ -1538,7 +1538,7 @@ services:
         - PORT=5649
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_89.json
     command: python3 launch.py
     networks:
@@ -1555,7 +1555,7 @@ services:
         - PORT=5650
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_90.json
     command: python3 launch.py
     networks:
@@ -1572,7 +1572,7 @@ services:
         - PORT=5651
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_91.json
     command: python3 launch.py
     networks:
@@ -1589,7 +1589,7 @@ services:
         - PORT=5652
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_92.json
     command: python3 launch.py
     networks:
@@ -1606,7 +1606,7 @@ services:
         - PORT=5653
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_93.json
     command: python3 launch.py
     networks:
@@ -1623,7 +1623,7 @@ services:
         - PORT=5654
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_94.json
     command: python3 launch.py
     networks:
@@ -1640,7 +1640,7 @@ services:
         - PORT=5655
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_95.json
     command: python3 launch.py
     networks:
@@ -1657,7 +1657,7 @@ services:
         - PORT=5656
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_96.json
     command: python3 launch.py
     networks:
@@ -1674,7 +1674,7 @@ services:
         - PORT=5657
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_97.json
     command: python3 launch.py
     networks:
@@ -1691,7 +1691,7 @@ services:
         - PORT=5658
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_98.json
     command: python3 launch.py
     networks:
@@ -1708,7 +1708,7 @@ services:
         - PORT=5659
         - EDGE_HOST=edge
         - EDGE_PORT=5555
-        - DEBUG_LEVEL=DEBUG
+        - LOG_LEVEL=DEBUG
         - CORE_DATA_LOCATION=/data/user_99.json
     command: python3 launch.py
     networks:
